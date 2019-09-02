@@ -3,9 +3,9 @@ import 'package:messioclone/utils/app_constants.dart';
 
 import 'HomePage.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MessioCloneApp());
 
-class MyApp extends StatelessWidget {
+class MessioCloneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
