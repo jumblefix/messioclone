@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:messioclone/pages/HomePage.dart';
+import 'package:messioclone/pages/ConversationPageList.dart';
+// import 'package:messioclone/pages/HomePage.dart';
 import 'package:messioclone/utils/app_constants.dart';
 
 void main() => runApp(MessioCloneApp());
@@ -12,7 +13,7 @@ class MessioCloneApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: ConversationPageList(),
     );
   }
 }

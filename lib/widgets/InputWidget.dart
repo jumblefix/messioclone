@@ -54,9 +54,11 @@ class InputWidget extends StatelessWidget {
       width: double.infinity,
       height: 50.0,
       decoration: new BoxDecoration(
-          border: new Border(
-              top: new BorderSide(color: Palette.greyColor, width: 0.5)),
-          color: Colors.white),
+        border: new Border(
+          top: new BorderSide(color: Palette.greyColor, width: 0.5),
+        ),
+        color: Colors.white,
+      ),
     );
   }
 }
