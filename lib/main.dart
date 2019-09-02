@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:messioclone/pages/HomePage.dart';
 import 'package:messioclone/utils/app_constants.dart';
-
-import 'HomePage.dart';
 
 void main() => runApp(MessioCloneApp());
 
