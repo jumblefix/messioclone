@@ -1,13 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:messioclone/main.dart';
-import 'package:messioclone/utils/app_constants.dart';
+import 'package:messioclone/pages/ConversationPageList.dart';
 
 void main() {
-  testWidgets('Checking if hello world shows up', (WidgetTester tester) async {
+  testWidgets('ConversationPageList is there', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MessioCloneApp());
 
-    expect(find.text(app_name), findsOneWidget);
+    expect(find.byType(ConversationPageList), findsOneWidget);
   });
 }
