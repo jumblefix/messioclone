@@ -3,7 +3,7 @@ import 'package:messioclone/utils/Pallets.dart';
 import 'package:intl/intl.dart';
 
 class ChatItemWidget extends StatelessWidget {
-  var index;
+  final int index;
 
   ChatItemWidget(this.index);
 
@@ -31,8 +31,7 @@ class ChatItemWidget extends StatelessWidget {
                   margin: EdgeInsets.only(right: 10.0),
                 )
               ],
-              mainAxisAlignment:
-                  MainAxisAlignment.end, // aligns the chatitem to right end
+              mainAxisAlignment: MainAxisAlignment.end,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,

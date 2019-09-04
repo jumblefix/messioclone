@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:messioclone/utils/Pallets.dart';
 
 class InputWidget extends StatelessWidget {
-  final TextEditingController textEditingController =
-      new TextEditingController();
+  final TextEditingController textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +10,10 @@ class InputWidget extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Material(
-            child: new Container(
-              margin: new EdgeInsets.symmetric(horizontal: 1.0),
-              child: new IconButton(
-                icon: new Icon(Icons.face),
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 1.0),
+              child: IconButton(
+                icon: Icon(Icons.face),
                 color: Palette.primaryColor,
                 onPressed: () {},
               ),
@@ -36,13 +35,11 @@ class InputWidget extends StatelessWidget {
               ),
             ),
           ),
-
-          // Send Message Button
           Material(
-            child: new Container(
-              margin: new EdgeInsets.symmetric(horizontal: 8.0),
-              child: new IconButton(
-                icon: new Icon(Icons.send),
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 8.0),
+              child: IconButton(
+                icon: Icon(Icons.send),
                 onPressed: () => {},
                 color: Palette.primaryColor,
               ),
@@ -53,9 +50,9 @@ class InputWidget extends StatelessWidget {
       ),
       width: double.infinity,
       height: 50.0,
-      decoration: new BoxDecoration(
-        border: new Border(
-          top: new BorderSide(color: Palette.greyColor, width: 0.5),
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(color: Palette.greyColor, width: 0.5),
         ),
         color: Colors.white,
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:messioclone/pages/ConversationPageList.dart';
-// import 'package:messioclone/pages/HomePage.dart';
-import 'package:messioclone/utils/app_constants.dart';
+import 'package:messioclone/utils/AppConstants.dart';
 
 void main() => runApp(MessioCloneApp());
 
@@ -9,7 +8,7 @@ class MessioCloneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: app_name,
+      title: AppConstants.app_name,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

@@ -13,13 +13,13 @@ class _ConversationPageState extends State<ConversationPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: ChatAppBar(), // Custom app bar for chat screen
+        appBar: ChatAppBar(),
         body: Stack(
           children: <Widget>[
             Column(
               children: <Widget>[
-                ChatListWidget(), //Chat list
-                InputWidget() // The input widget
+                ChatListWidget(),
+                InputWidget(),
               ],
             ),
           ],

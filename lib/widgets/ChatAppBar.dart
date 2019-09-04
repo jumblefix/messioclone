@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:messioclone/utils/Assets.dart';
 import 'package:messioclone/utils/Pallets.dart';
+import 'MediaButtons.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height = 100;
+
   @override
   Widget build(BuildContext context) {
     var textHeading = TextStyle(
-        color: Palette.primaryTextColor,
-        fontSize: 20); // Text style for the name
-    var textStyle = TextStyle(
-        color: Palette.secondaryTextColor); // Text style for everything else
+      color: Palette.primaryTextColor,
+      fontSize: 20,
+    );
+    var textStyle = TextStyle(color: Palette.secondaryTextColor);
 
-    double width =
-        MediaQuery.of(context).size.width; // calculate the screen width
+    double width = MediaQuery.of(context).size.width;
+
     return Material(
       child: Container(
-        decoration: new BoxDecoration(
+        decoration: BoxDecoration(
           boxShadow: [
-            //adds a shadow to the appbar
-            new BoxShadow(
+            BoxShadow(
               color: Colors.black,
               blurRadius: 5.0,
             ),
@@ -30,14 +31,12 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Row(
             children: <Widget>[
               Expanded(
-                //we're dividing the appbar into 7 : 3 ratio. 7 is for content and 3 is for the display picture.
                 flex: 7,
                 child: Center(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Container(
-                        height: 70 - (width * .06),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
@@ -67,39 +66,11 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
                           ],
                         ),
                       ),
-                      //second row containing the buttons for media
-                      Container(
-                        height: 23,
-                        padding: EdgeInsets.fromLTRB(20, 5, 5, 0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Text(
-                              'Photos',
-                              style: textStyle,
-                            ),
-                            VerticalDivider(
-                              width: 30,
-                              color: Palette.primaryTextColor,
-                            ),
-                            Text(
-                              'Videos',
-                              style: textStyle,
-                            ),
-                            VerticalDivider(
-                              width: 30,
-                              color: Palette.primaryTextColor,
-                            ),
-                            Text('Files', style: textStyle)
-                          ],
-                        ),
-                      ),
+                      MediaButtons(textStyle: textStyle),
                     ],
                   ),
                 ),
               ),
-              //This is the display picture
               Expanded(
                 flex: 3,
                 child: Container(
